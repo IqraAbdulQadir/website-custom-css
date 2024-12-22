@@ -2,16 +2,16 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-const HomePage = () => {
+const About = () => {
     return(
         <div>
-            <h1>Home Page</h1>
+            <h1>About Us</h1>
             <Link
-            href='/services'><Button> Services</Button></Link>
+            href='/'><Button>Home</Button></Link>
             
 
         </div>
     )
 }
 
-export default HomePage;
+export default About;

@@ -1,0 +1,91 @@
+/* Footer Styles */
+.footer {
+    background-color: rgb(31, 41, 55); /* Dark background */
+    color: white; /* White text */
+    padding: 2rem 1rem;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo Section */
+.logoSection {
+    text-align: center; /* Center on small screens */
+}
+
+.logoSection h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Links Section */
+.linksSection h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.linksSection ul {
+    list-style: none; /* Remove default list style */
+    padding: 0;
+}
+
+.linksSection ul li {
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.linksSection ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.linksSection ul li a:hover {
+    color: yellow; /* Highlight on hover */
+}
+
+/* Social Section */
+.socialSection {
+    text-align: center; /* Center on small screens */
+}
+
+.socialSection h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.socialIcons a {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.socialIcons a:hover {
+    transform: scale(1.2); /* Grow on hover */
+    color: yellow; /* Highlight on hover */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Row layout for larger screens */
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .logoSection, .linksSection, .socialSection {
+        text-align: left; /* Align text to the left */
+    }
+
+    .linksSection ul {
+        text-align: left; /* Align links to the left */
+    }
+}

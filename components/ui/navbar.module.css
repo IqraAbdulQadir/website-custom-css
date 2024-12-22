@@ -1,0 +1,127 @@
+/* Navbar Styles */
+
+
+.navbar {
+    background-color: rgb(31, 41, 55); /* Dark background */
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+/* Container Styles */
+.container {
+    max-width: 100%; /* Prevent unintended overflow */
+    margin: 0 auto;  /* Center content */
+    padding: 0 1rem; /* Add padding for spacing */
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+/* Navbar Flexbox Layout */
+.navbar .navdiv {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; /* Consistent padding */
+}
+
+/* Logo Styles */
+.navbar .logodiv {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: block;
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem;
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none; /* Hide on larger screens */
+    }
+}
+
+/* Links Container Styles */
+/* Hamburger Menu Layout (Default: Column for small screens) */
+.linksdiv {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    gap: 1.5rem; /* Space between items */
+    position: absolute;
+    background-color: rgb(31, 41, 55); /* Dark background */
+    width: 100%; /* Full width */
+    top: 60px; /* Adjusted for navbar height */
+    left: 0;
+    padding: 1rem 0; /* Add some padding inside */
+    margin: 0; /* Remove unwanted margins */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hidden State */
+.linksdiv.hidden {
+    display: none; /* Completely hide when not open */
+}
+
+/* Open State */
+.linksdiv.block {
+    display: flex; /* Show when open */
+}
+
+/* Large Screens: Row Layout */
+@media (min-width: 768px) {
+    .linksdiv {
+        flex-direction: row; /* Change to row */
+        align-items: center; /* Vertically align items */
+        position: static; /* Reset positioning */
+        background-color: transparent; /* No background needed */
+        width: auto; /* Let it size automatically */
+        top: auto; /* Reset top positioning */
+        padding: 0; /* Reset padding */
+    }
+
+    .linksdiv.hidden {
+        display: flex; /* Always visible on larger screens */
+    }
+}
+
+
+/* Link Styles */
+.link {
+    background-color: rgb(55, 65, 81); /* Dark link background */
+    padding: 0.5rem 1rem; /* Consistent padding */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.link:hover {
+    background-color: rgb(55, 65, 81); /* Dark background on hover */
+}
+
+@media (min-width: 768px) {
+    .link:hover {
+        background-color: transparent; /* Transparent on larger screens */
+    }
+}
+
+/* Active Link Styles */
+.link.active {
+    color: yellow; /* Highlight active link */
+    font-weight: bold; /* Bold active link */
+}
